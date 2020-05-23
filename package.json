@@ -1,0 +1,41 @@
+{
+  "name": "markdown-script-tag",
+  "displayName": "Markdown Script Tag",
+  "description": "Markdown Syntax highlighting support for html script tags using application/markdown mime type attributes.",
+  "publisher": "sissel",
+  "icon": "images/logo.png",
+  "author": "Nikolas Savvidis <nicos@gmx.com>",
+  "version": "0.1.0",
+  "keywords": [
+    "html",
+    "script markdown tag",
+    "markdown tag",
+    "markdown tag html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panoply/vscode-markdown-script-tag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/panoply/vscode-markdown-script-tag/issues"
+  },
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "source.markdown.embedded",
+        "path": "./syntax/script-markdown.embedded.json",
+        "injectTo": ["text.html"],
+        "embeddedLanguages": {
+          "meta.embedded.block.markdown.html": "markdown"
+        }
+      }
+    ]
+  }
+}

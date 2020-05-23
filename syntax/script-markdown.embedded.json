@@ -1,0 +1,78 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Markdown Script Tag",
+  "scopeName": "source.markdown.embedded",
+  "injectionSelector": "L:text.html, L:markup -(string -meta.embedded -raw.block.markdown)",
+  "patterns": [
+    {
+      "include": "#script-markdown-tag"
+    }
+  ],
+  "repository": {
+    "script-markdown-tag": {
+      "contentName": "meta.embedded.block.markdown.html",
+      "begin": "(<)(script)\\b(?=[^>]*type=(\"application/markdown\"))(?![^/>]*/>\\s*$)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.markdown"
+        },
+        "2": {
+          "name": "entity.name.tag.markdown"
+        }
+      },
+      "end": "(</)(script)(>)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.markdown"
+        },
+        "2": {
+          "name": "entity.name.tag.markdown"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.markdown"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#attribute-name"
+        },
+        {
+          "include": "#attribute-value"
+        },
+        {
+          "include": "#source-markdown"
+        }
+      ]
+    },
+    "source-markdown": {
+      "begin": "(>)",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.tag.metadata.markdown.start.markdown"
+        },
+        "1": {
+          "name": "punctuation.definition.tag.end.markdown"
+        }
+      },
+      "end": "(?=</script>)",
+      "endCaptures": {
+        "0": {
+          "name": "meta.tag.metadata.markdown.end.markdown"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "attribute-name": {
+      "name": "entity.other.attribute-name.markdown",
+      "match": "\\b([a-zA-Z\\-:_]+)"
+    },
+    "attribute-value": {
+      "name": "string.quoted.double.markdown",
+      "match": "(\"|').*?(\"|')"
+    }
+  }
+}
