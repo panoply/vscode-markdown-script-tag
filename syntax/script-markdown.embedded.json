@@ -11,7 +11,7 @@
   "repository": {
     "script-markdown-tag": {
       "contentName": "meta.embedded.block.markdown.html",
-      "begin": "(<)(script)\\b(?=[^>]*type=(\"application/markdown\"))(?![^/>]*/>\\s*$)",
+      "begin": "(<)(script)\\b(?=[^>]*type=(\"text/markdown\"))(?![^/>]*/>\\s*$)",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.tag.begin.markdown"

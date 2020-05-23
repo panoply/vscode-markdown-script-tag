@@ -1,7 +1,7 @@
 {
   "name": "markdown-script-tag",
   "displayName": "Markdown Script Tag",
-  "description": "Markdown Syntax highlighting support for html script tags using application/markdown mime type attributes.",
+  "description": "Markdown Syntax highlighting support for html script tags using text/markdown mime type attributes.",
   "publisher": "sissel",
   "icon": "images/logo.png",
   "author": "Nikolas Savvidis <nicos@gmx.com>",
