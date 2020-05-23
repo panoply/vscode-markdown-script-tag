@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Markdown Script Tag",
   "scopeName": "source.markdown.embedded",
-  "injectionSelector": "L:text.html, L:markup -(string -meta.embedded -raw.block.markdown)",
+  "injectionSelector": "L:text.html -meta.embedded",
   "patterns": [
     {
       "include": "#script-markdown-tag"
