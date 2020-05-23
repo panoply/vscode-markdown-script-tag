@@ -2,7 +2,7 @@
 
 # Markdown syntax support in HTML Scripts
 
-Syntax highlighting support for HTML `<script></script>` tags using `application/markdown` mime type attributes.
+Syntax highlighting support for HTML `<script></script>` tags using `text/markdown` mime type attributes.
 
 ## Why?
 
