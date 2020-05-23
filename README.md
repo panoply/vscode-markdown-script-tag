@@ -15,6 +15,7 @@ Made available as per request from a developer.
 
 ## Example
 
+<img src="https://github.com/panoply/vscode-markdown-script-tag/blob/master/images/example.png?raw=true" width="100%">
 
 ## License
 
